@@ -1,13 +1,13 @@
-//swiper 
-var swiper = new Swiper('.home', {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-        delay: 2500,  // Slide otomatis setiap 3 detik
-        disableOnInteraction: false, // Tetap autoplay meskipun user interaksi
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon");
+    const navbar = document.querySelector(".navbar");
+
+    if (menuIcon && navbar) {
+        menuIcon.addEventListener("click", function () {
+            console.log("Menu diklik!"); // Cek di console
+            navbar.classList.toggle("active");
+        });
+    } else {
+        console.log("Elemen tidak ditemukan!");
+    }
 });
